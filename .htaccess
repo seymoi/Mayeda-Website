@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteRule server https://discord.gg/MyuapNmRt8
+RewriteRule premium pages/premium/index.php
+RewriteRule invite https://discord.com/api/oauth2/authorize?client_id=791365509328535571&permissions=8&scope=bot
+
+RewriteRule login includes/discord/login.php
+RewriteRule logout includes/discord/logout.php
+
+RewriteRule articles/redaction pages/articles/redaction.php
+RewriteRule articles/read pages/articles/article.php
+RewriteRule articles/articles pages/articles/index.php
+RewriteRule articles/delete pages/articles/delete.php
+
+RewriteRule dashboard/guilds pages/dashboard/index.php
+RewriteRule dashboard/guild pages/dashboard/guild.php
+RewriteRule dashboard/top pages/dashboard/top.php
+
+RewriteRule roulette roue/index.php
+
+RewriteRule tutorials pages/tuto/index.php
+
+ErrorDocument 404 /public/error/404.php
+ErrorDocument 403 /public/error/403.php

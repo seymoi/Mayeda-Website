@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --home-color: rgb(52, 54, 66);
+    --sidebar-color: #36393F;
+    --primary-color: #d7d5e4;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #cccbcb;
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--home-color);
+    transition: var(--tran-05);
+}
+
+.home {
+    position: absolute;
+    top: 10px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--home-color);
+    transition: var(--tran-05);
+}
+
+.home .text {
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.home .title {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.home .subtitle {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding-left: 20px;
+}
+
+.home .text {
+    color: var(--text-color);
+}
+
+.home .servname {
+    display: flex;
+}
+
+.home .servname .avatar {
+    width: auto;
+    height: 100px;
+    border: 2px solid #99AAB5;
+    border-radius: 50%;
+}
+
+.home .servname .name {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding-left: 20px;
+    padding-top: 10px;
+    max-width: 150px;
+}
+
+.link {
+    min-width: 100px;
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+}
+
+.link a {
+    color: #93a0ae;
+    text-decoration: none;
+}
+
+.link a:hover {
+    color: #606d8a;
+}
+
+.group {
+    display: inline-block;
+    background: #202229;
+    padding: 28px;
+    margin: 1em 0;
+    clear: both;
+    vertical-align: top;
+    border-radius: 5px;
+    font-family: 'Maison Neue';
+}
+
+.group .settings-content .title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+.musicSquare {
+    background-color: #181a20;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.musicSquare .music-icon {
+    left: auto;
+    min-width: 75px;
+    max-width: 75px;
+    border: 2px;
+    border-radius: 10%;
+    margin-left: 20px;
+}
+
+.musicSquare .topText {
+    width: 300px;
+    height: 100;
+    padding: 10px;
+    margin: 20px;
+}
+
+.musicSquare .topTitle {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.musicSquare .topArtist {
+    font-weight: bold;
+    font-size: 14px;
+    color: #404144;
+}
+
+.musicSquare .topCount {
+    font-weight: bold;
+    font-size: 12px;
+    color: #3a64b1;
+}

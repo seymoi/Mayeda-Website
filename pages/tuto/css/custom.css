@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap);
+:root {
+    --brand: #5865f2;
+    --brand-gradient: linear-gradient(90deg, #8ea1e1, #7289da);
+    --greyple: #99aab5;
+    --dark-not-black: #2c2f33;
+    --focus-border: #00b0f4;
+    --status-green: #43b581;
+    --text-link: #00b0f4;
+    --off-white: #f6f6f6;
+    --white: #fff;
+    --not-quite-black: #23272a;
+    --not-quite-black-rgb: 35, 39, 42;
+    --black: #000;
+    --ekko-red: #de2761;
+    --page-max-width: 1260px;
+    --num-grid-columns: 4;
+    --page-gutter: 24px;
+    --section-spacing: 78px;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    color: #FFF;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+}
+
+.row {
+    box-sizing: border-box;
+    border: 0px;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 15px;
+    outline: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+}
+
+li,
+ul {
+    box-sizing: border-box;
+    border: 0px;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0px;
+    outline: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+}
+
+.list {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    --antd-wave-shadow-color: #177ddc;
+    --scroll-bar: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #181a20;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+section#head {
+    background: linear-gradient(to right, rgb(148, 144, 145), 45%, rgb(72, 67, 68));
+    position: relative;
+    min-height: 800px;
+    overflow: hidden;
+}
+
+section#head .body {
+    grid-column: 3/span 8;
+    text-align: center;
+    padding-top: var(--section-spacing);
+    padding-bottom: var(--section-spacing);
+    z-index: 1;
+}
+
+section#head .body .text {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--white);
+}
+
+section#head .body .text .title {
+    font-weight: 800;
+    font-size: 44px;
+    font-size: clamp(24px, 5vw, 44px);
+    line-height: 95%;
+    text-transform: uppercase;
+    text-rendering: geometricPrecision;
+}
+
+section#head .body .text .subtitle {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: clamp(24px, 5vw, 15px);
+    line-height: 1.625;
+}

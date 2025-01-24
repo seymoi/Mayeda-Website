@@ -1,0 +1,758 @@
+/* Google Font Import - Poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --home-color: rgb(52, 54, 66);
+    --sidebar-color: #36393F;
+    --primary-color: #d7d5e4;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #cccbcb;
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--home-color);
+    transition: var(--tran-05);
+}
+
+
+/* ===== Sidebar ===== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+
+/* ===== Reusable code - Here ===== */
+
+.sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+
+/* =========================== */
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: #202225;
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu {
+    margin-top: 40px;
+}
+
+.sidebar li.server-box {
+    border-radius: 6px;
+    background-color: rgb(48, 50, 58);
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: rgb(48, 50, 58);
+    transition: var(--tran-03);
+}
+
+.sidebar li a:hover {
+    background-color: #5865f2;
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+.sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar .menu-bar .mode {
+    border-radius: 6px;
+    background-color: #23272a;
+    position: relative;
+    transition: var(--tran-05);
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--home-color);
+    transition: var(--tran-05);
+}
+
+.home .text {
+    color: var(--text-color);
+    padding: 12px 60px;
+}
+
+.home .title {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.home .subtitle {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding-left: 20px;
+}
+
+.sidebar.close~.home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+.home .text {
+    color: var(--text-color);
+}
+
+.home .servname {
+    display: flex;
+}
+
+.home .servname .avatar {
+    width: auto;
+    height: 100px;
+    border: 2px solid #99AAB5;
+    border-radius: 50%;
+}
+
+.home .servname .name {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    padding-left: 20px;
+    padding-top: 10px;
+    max-width: 100px;
+}
+
+.home .servinfos {
+    background: #181a20;
+    padding: 28px;
+    margin: 1em 0;
+    clear: both;
+    vertical-align: top;
+    border-radius: 5px;
+    font-family: 'Maison Neue';
+    min-width: 1000px;
+    max-width: 1000px;
+}
+
+.home .servinfos .title {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+.home .servinfos .server-info .number {
+    letter-spacing: 1.2px;
+    line-height: 14px;
+    color: #5865f2;
+    margin-right: 3px;
+}
+
+ul {
+    list-style: none;
+}
+
+.home .servinfos .server-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.home .servinfos .server-info li {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #68727D;
+    display: inline-block;
+    min-width: 25%;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.home .servinfos .server-info li span {
+    color: #ddd;
+    margin-left: 0.3em;
+}
+
+.group-settings {
+    display: inline-block;
+    background: #202229;
+    padding: 28px;
+    margin: 1em 0;
+    clear: both;
+    vertical-align: top;
+    border-radius: 5px;
+    font-family: 'Maison Neue';
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.group-settings .settings-content .title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+.group-settings .settings-content .label {
+    font-size: 12px;
+    line-height: 20px;
+    color: #3a64b1;
+    letter-spacing: -0.2px;
+}
+
+.group-settings .settings-content .label .information {
+    color: rgb(150, 64, 64);
+}
+
+.group-settings-2 {
+    display: inline-block;
+    background: #202229;
+    padding: 28px;
+    margin: 1em 0;
+    vertical-align: top;
+    text-align: center;
+    border-radius: 5px;
+    font-family: 'Maison Neue';
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.group-settings-2 .settings-content .title {
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    letter-spacing: 2.1px;
+    text-transform: uppercase;
+    border-bottom: none;
+}
+
+.group-settings-2 .settings-content .title i {
+    color: #177ddc;
+    font-size: 15px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.group-settings-2 .settings-content .label {
+    font-size: 12px;
+    line-height: 20px;
+    color: #3a64b1;
+    letter-spacing: -0.2px;
+}
+
+.group-settings-2 .settings-content .label .information {
+    color: rgb(150, 64, 64);
+}
+
+.music-icon {
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    max-width: 250px;
+    border-radius: 6px;
+}
+
+.music-title {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    color: #aaaaaa;
+    letter-spacing: -0.2px;
+    margin-top: 10px;
+}
+
+.music-artist {
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    color: #3a64b1;
+    letter-spacing: -0.2px;
+}
+
+.music-request {
+    margin-top: 15px;
+    padding-right: 250px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    color: #4c4e50;
+    letter-spacing: -0.2px;
+}
+
+.music-request .requester {
+    color: #3a64b1;
+}
+
+.music-url {
+    margin-top: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.2px;
+}
+
+.music-url a {
+    color: #93a0ae;
+    text-decoration: none;
+}
+
+.link {
+    color: #93a0ae;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #606d8a;
+}
+
+.input {
+    width: 200px;
+    display: inline-flex;
+    justify-content: flex-start;
+    line-height: 1.5;
+    position: relative;
+    vertical-align: top;
+}
+
+.select {
+    width: 195px;
+    display: inline-flex;
+    justify-content: flex-start;
+    line-height: 1.5;
+    position: relative;
+    vertical-align: top;
+}
+
+input[type=text] {
+    height: 32px;
+    padding: 0.4em 0.2em 0.4em 0.6em;
+}
+
+input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+input[type="number"] {
+    height: 32px;
+    padding: 0.4em 0.2em 0.4em 0.6em;
+}
+
+input[type="submit"] {
+    opacity: 0;
+}
+
+select {
+    height: 32px;
+    padding: 0.4em 0.2em 0.4em 0.6em;
+}
+
+.group-settings .settings-content .control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.group-settings .settings-content .control input {
+    background: #272b34;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.group-settings .settings-content .control select {
+    background: #272b34;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.group-settings .settings-content .button {
+    padding-top: 1px;
+    font-size: 20px;
+    height: 32px;
+    width: 50px;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 10%;
+    background-color: rgb(77, 179, 63);
+    border: 1px;
+    border-color: #2c2f33;
+    color: #23272a;
+}
+
+.group-settings .settings-content .button_large {
+    padding-top: 1px;
+    font-size: 20px;
+    height: 32px;
+    width: 100%;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-radius: 3%;
+    background-color: rgb(77, 179, 63);
+    border: 1px;
+    border-color: #2c2f33;
+    color: #23272a;
+}
+
+.group-settings .settings-content .button_large:hover {
+    background-color: rgb(45, 95, 39);
+    color: #FFF;
+    box-shadow: none;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.group-settings .settings-content .button:hover {
+    background-color: rgb(45, 95, 39);
+    color: #FFF;
+    box-shadow: none;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.group-settings .settings-content #message {
+    font-size: 10px;
+    color: #5865f2;
+}
+
+.group-settings .settings-content .rich-toggle {
+    align-content: center;
+    width: 100%;
+    right: 1em;
+}
+
+span {
+    font-style: inherit;
+    font-weight: inherit;
+}
+
+.rich-toggle {
+    flex-shrink: 1;
+    width: 32%;
+    background-color: #181a20;
+    padding: 0.7em 1em;
+    margin-right: 0.5em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    width: calc(33% - 1em);
+}
+
+.checkbox {
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.25;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.settings-content .rich-toggle input[type=checkbox]+label:before {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    content: " ";
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+html {
+    --antd-wave-shadow-color: #177ddc;
+    --scroll-bar: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #181a20;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modal {
+    z-index: 1;
+    background-color: #ffec63;
+    background-image: linear-gradient(45deg, #ffd966 25%, transparent 25%, transparent 75%, #ffd966 75%, #ffd966), linear-gradient(-45deg, #ffd966 25%, transparent 25%, transparent 75%, #ffd966 75%, #ffd966);
+    background-size: 60px 60px;
+    animation: slide 4s infinite linear;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.6rem 4rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    animation: slide 4s infinite linear;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal .message {
+    font-size: 1.1rem;
+    margin-bottom: 1.6rem;
+    margin-top: 0;
+    color: #23272a;
+}
+
+.modal .btn {
+    color: rgb(33, 34, 34);
+    font-family: inherit;
+    font-size: inherit;
+    background: white;
+    padding: 0.3rem 3.4rem;
+    border: 3px solid black;
+    margin-right: 2.6rem;
+    box-shadow: 0 0 0 black;
+    transition: all 0.2s;
+    background-color: #ffec63;
+    background-image: linear-gradient(45deg, #ffd966 25%, transparent 25%, transparent 75%, #ffd966 75%, #ffd966), linear-gradient(-45deg, #ffd966 25%, transparent 25%, transparent 75%, #ffd966 75%, #ffd966);
+    background-size: 60px 60px;
+    animation: slide 4s infinite linear;
+}
+
+.modal .btn:last-child {
+    margin: 0;
+}
+
+.modal .btn:hover {
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transform: translate(-0.4rem, -0.4rem);
+}
+
+.modal .btn:active {
+    box-shadow: 0 0 0 black;
+    transform: translate(0, 0);
+}
+
+.modal .options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.musicSquare {
+    background-color: #181a20;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 5px;
+    margin: 10px;
+    width: auto;
+    min-height: 100px;
+    max-height: 100px;
+}
+
+.musicSquare .music-icon {
+    left: auto;
+    min-width: 75px;
+    max-width: 75px;
+    border: 2px;
+    border-radius: 10%;
+    margin-left: 10px;
+}
+
+.musicSquare .topText {
+    width: 200px;
+    height: 100;
+    padding: 10px;
+    margin: 20px;
+}
+
+.musicSquare .topTitle {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.musicSquare .topArtist {
+    font-weight: bold;
+    font-size: 10px;
+    color: #404144;
+}
+
+.musicSquare .topCount {
+    font-weight: bold;
+    font-size: 10px;
+    color: #3a64b1;
+}
