@@ -1,9 +1,10 @@
 # 🕹️ Site pour mon bot discord avec un mini dashboard
 
-Utilise l'Oauth de discord pour se connecter. 
+Site pour mon bot discord, comprenant un dashboard et plusieurs autres fonctions
 
-[!Note]
+> [!Note]
 > Le dashboard n'est plus fonctionnelle
+> Aucune suite prévue, code perdu !
 
 ---
 
